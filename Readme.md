@@ -13,7 +13,7 @@ This is written in lex but without the state syntax, it only uses regexp pattern
 This program uses five regexps which are reproduced below
 - `\"([^\\\"\n]|((\\)+[^\\\"])|(\\(\\\\)*\"))*(\\\\)*\"` matches quoted stuff and takes care of escaped characters.
 - `\/\/([^\n])* ` matches single line comments.
-- `\/\*([^\*]|[\n\r]|(\*+([^\*\/]|[\n\r])))*(\*)+\/` matches multi-line comments (since there is no non-greedy matching in lex I use a hack found on [http://blog.ostermiller.org/find-comment](http://blog.ostermiller.org/find-comment) to achieve the same effect.
+- `\/\*([^\*]|[\n\r]|(\*+([^\*\/]|[\n\r])))*(\*)+\/` matches multi-line comments (since there is no non-greedy matching in lex I use a hack found on [http://blog.ostermiller.org/find-comment](http://blog.ostermiller.org/find-comment) to achieve the same effect).
 - `(\/\*([^\/\*]|\n|(\*+[^\/])|([^\*]\/))*)` matches an unterminated multi-line comment.
 - ` . ` matches everything else
 
