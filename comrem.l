@@ -1,6 +1,5 @@
 %{
     int myflag;
-    int flag2=0;
 %}
 
 %%
